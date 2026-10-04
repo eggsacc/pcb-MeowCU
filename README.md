@@ -1,32 +1,37 @@
 <div align="center">
 
-# STM32F405 Dev Module + BLDC hat
+# MeowCU
 
 ![MCU](https://img.shields.io/badge/MCU-STM32F405RGT6-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
-![PCB](https://img.shields.io/badge/PCB-4--layer%20%C2%B7%2058.75%20%C3%97%2035.5%20mm-2E8B57?style=flat-square)
+![PCB](https://img.shields.io/badge/PCB-4--layer-2E8B57?style=flat-square)
 ![EDA](https://img.shields.io/badge/KiCad-314CB0?style=flat-square&logo=kicad&logoColor=white)
 
-### MCU Dev
-STM32F405RGT6 MCU dev module with commonly used peripherals broken out for easy access, and a dedicated CAN transceiver. Also includes 2 user programmable buttons and mini OLED display.
 
-<img src="assets/f405-dev-v1.1.png" width="720" alt="STM32F4 dev module render">
+4-layer **STM32F405RGT6 MeowCU** 🐱 (MCU) dev module with commonly used peripherals broken out for easy access, and a dedicated CAN transceiver. Also includes 2 user programmable buttons and mini OLED display.
 
-### BLDC Dev
-BLDC hat based on the DRV8316C integrated driver. 6-PWM mode, 5-35V input, 5A continuous and 3-phase low-side current sensing. Suitable for FOC algorithm developement and testing for low current gimbal motors.
+>3D render - Front
 
-<img src="assets/bldc-v1.0.png" width="720" alt="STM32F4 dev module render">
+<img src="assets/meowcu-v1.6-render.png" width="720" alt="STM32F4 dev module render">
+
+>Back
+
+<img src="assets/meowcu-v1.6-back-render.png" width="720" alt="STM32F4 dev module render">
+---
+
+
+## Silkscreen
+
+<img src="assets/silkscreen-v1.6.png" width="720" alt="STM32CubeMX pin map">
+
+## Layout (all layers)
+<img src="assets/all-layers.png" width="720" alt="STM32CubeMX pin map">
 </div>
-
 ---
 
 ## MCU Pinout
 
 <div align="center">
 <img src="assets/stm32_ioc.png" width="720" alt="STM32CubeMX pin map">
-<img src="assets/silkscreen.png" width="720" alt="STM32CubeMX pin map">
-</div>
-
----
 
 | Breakout / feature | Peripheral | Pin mapping |
 |---|---|---|
@@ -42,13 +47,13 @@ BLDC hat based on the DRV8316C integrated driver. 6-PWM mode, 5-35V input, 5A co
 | **Crystal** (25MHz) | `RCC` HSE | OSC_IN &rarr; `PH0`<br>OSC_OUT &rarr; `PH1` |
 | **GPIO header** (2&times;10) | free GPIO | <table><tbody><tr><td align="right">1 &rarr;</td><td><code>3.3V</code></td><td align="right">&emsp;2 &rarr;</td><td><code>3.3V</code></td></tr><tr><td align="right">3 &rarr;</td><td><code>5V</code></td><td align="right">&emsp;4 &rarr;</td><td><code>5V</code></td></tr><tr><td align="right">5 &rarr;</td><td><code>GND</code></td><td align="right">&emsp;6 &rarr;</td><td><code>GND</code></td></tr><tr><td align="right">7 &rarr;</td><td><code>PB4</code></td><td align="right">&emsp;8 &rarr;</td><td><code>PB3</code></td></tr><tr><td align="right">9 &rarr;</td><td><code>PC12</code></td><td align="right">&emsp;10 &rarr;</td><td><code>PC2</code></td></tr><tr><td align="right">11 &rarr;</td><td><code>PC3</code></td><td align="right">&emsp;12 &rarr;</td><td><code>PA0</code></td></tr><tr><td align="right">13 &rarr;</td><td><code>PA1</code></td><td align="right">&emsp;14 &rarr;</td><td><code>PC9</code></td></tr><tr><td align="right">15 &rarr;</td><td><code>PC8</code></td><td align="right">&emsp;16 &rarr;</td><td><code>PC7</code></td></tr><tr><td align="right">17 &rarr;</td><td><code>PC6</code></td><td align="right">&emsp;18 &rarr;</td><td><code>PB15</code></td></tr><tr><td align="right">19 &rarr;</td><td><code>PB14</code></td><td align="right">&emsp;20 &rarr;</td><td><code>PB12</code></td></tr></tbody></table> |
 
-> Buttons are active-low to GND (3V3 pull-up).
+**Buttons are active-low to GND (3V3 pull-up).*
 
----
+
 
 ## Power
 
->[!warning]Shared +5V rail
+>**Shared +5V rail**:
 >5V rails are shared; do not connect USB and external power simultaneously!
 
 - **USB-C**, 2-pin **`5V IN`** header, or `5V` on 2x10 breakout.
@@ -56,13 +61,7 @@ BLDC hat based on the DRV8316C integrated driver. 6-PWM mode, 5-35V input, 5A co
 
 ---
 
-## BLDC Hat hardware
 <div align="center">
-<img src="assets/bldc-layout.png" width="720" alt="STM32CubeMX pin map">
-</div>
-
----
-<div align="center">
-Designed by <b>@eggsacc</b> · F405 Dev. V1.1<br>
-Updated 22/09/2026
+Designed by <b>@eggsacc</b> · MeowCU V1.6<br>
+Updated 05/10/2026
 </div>
