@@ -11,22 +11,17 @@
 
 >3D render - Front
 
-<img src="assets/meowcu-v1.6-render.png" width="720" alt="STM32F4 dev module render">
+<img src="assets/v1.7-render.png" width="720" alt="STM32F4 dev module render">
 
 >Back
 
-<img src="assets/meowcu-v1.6-back-render.png" width="720" alt="STM32F4 dev module render">
----
+<img src="assets/v1.7-render-back.png" width="720" alt="STM32F4 dev module render">
 
-
-## Silkscreen
-
-<img src="assets/silkscreen-v1.6.png" width="720" alt="STM32CubeMX pin map">
 
 ## Layout (all layers)
-<img src="assets/all-layers.png" width="720" alt="STM32CubeMX pin map">
+<img src="assets/v1.7-layout.png" width="720" alt="STM32CubeMX pin map">
 </div>
----
+
 
 ## MCU Pinout
 
@@ -48,20 +43,16 @@
 | **GPIO header** (2&times;10) | free GPIO | <table><tbody><tr><td align="right">1 &rarr;</td><td><code>3.3V</code></td><td align="right">&emsp;2 &rarr;</td><td><code>3.3V</code></td></tr><tr><td align="right">3 &rarr;</td><td><code>5V</code></td><td align="right">&emsp;4 &rarr;</td><td><code>5V</code></td></tr><tr><td align="right">5 &rarr;</td><td><code>GND</code></td><td align="right">&emsp;6 &rarr;</td><td><code>GND</code></td></tr><tr><td align="right">7 &rarr;</td><td><code>PB4</code></td><td align="right">&emsp;8 &rarr;</td><td><code>PB3</code></td></tr><tr><td align="right">9 &rarr;</td><td><code>PC12</code></td><td align="right">&emsp;10 &rarr;</td><td><code>PC2</code></td></tr><tr><td align="right">11 &rarr;</td><td><code>PC3</code></td><td align="right">&emsp;12 &rarr;</td><td><code>PA0</code></td></tr><tr><td align="right">13 &rarr;</td><td><code>PA1</code></td><td align="right">&emsp;14 &rarr;</td><td><code>PC9</code></td></tr><tr><td align="right">15 &rarr;</td><td><code>PC8</code></td><td align="right">&emsp;16 &rarr;</td><td><code>PC7</code></td></tr><tr><td align="right">17 &rarr;</td><td><code>PC6</code></td><td align="right">&emsp;18 &rarr;</td><td><code>PB15</code></td></tr><tr><td align="right">19 &rarr;</td><td><code>PB14</code></td><td align="right">&emsp;20 &rarr;</td><td><code>PB12</code></td></tr></tbody></table> |
 
 **Buttons are active-low to GND (3V3 pull-up).*
+</div>
 
 
+## Power mux
 
-## Power
-
->**Shared +5V rail**:
->5V rails are shared; do not connect USB and external power simultaneously!
-
-- **USB-C**, 2-pin **`5V IN`** header, or `5V` on 2x10 breakout.
-- AP2112K-3.3 LDO provides the 3.3 V rail (600 mA max).
+The external 5V pin and USB `vbus` are separate rails; a power mux IC (TPS2116) automatically switches to the external 5V rail when connected.
 
 ---
 
 <div align="center">
 Designed by <b>@eggsacc</b> · MeowCU V1.6<br>
-Updated 05/10/2026
+Updated 09/10/2026
 </div>

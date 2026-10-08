@@ -60,12 +60,12 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.25,
+          "min_clearance": 0.3,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
+          "min_thickness": 0.2,
           "pad_connection": 2,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.3,
+          "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
       },
@@ -218,7 +218,8 @@
         0.0,
         0.3,
         0.5,
-        1.0
+        1.0,
+        1.2
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -554,7 +555,7 @@
       "plot": "manufacturing/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "MeowCU.step",
       "svg": "",
       "vrml": ""
     },
@@ -728,13 +729,13 @@
         "uuid": "026fffa8-4538-4888-a4f6-fd26ee399598"
       }
     ],
-    "used_designators": "C12,C18-20,C22-24,#PWR8-9,#PWR11,#PWR15-16,#PWR23-30,#PWR32-57,H1-4,SW1,SW3-9,R1,R6-20,#FLG1-2,J2,J5-12,U5,KEY1,D2-3",
+    "used_designators": "C12,C18-20,C22-24,#PWR8-9,#PWR11,#PWR15-16,#PWR23-30,#PWR32-63,H1-4,SW1,SW3-9,R1,R6-22,#FLG1-2,J2-12,U5,KEY1,D2-3",
     "variants": []
   },
   "sheets": [
     [
       "026fffa8-4538-4888-a4f6-fd26ee399598",
-      "stm32f4-dev-module"
+      "MeowCU"
     ]
   ],
   "text_variables": {},
